@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Imperial Medical Ltd</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/fallback.png" alt="Imperial Medical Ltd">
+                <span>Imperial Medical Ltd</span>
+            </a>
+            <div class="hamburger">☰</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link">Products & Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Medical Supplies Division</a></li>
+                            <li><a href="#">Water Treatment Solutions Division</a></li>
+                            <li><a href="#">Technical Services Division</a></li>
+                            <li><a href="#">Sales and Distribution Division</a></li>
+                            <li><a href="#">Projects & Tenders Division</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="quality.html" class="nav-link">Quality</a></li>
+                    <li><a href="contact.html" class="nav-link active btn">Request a Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for quotations and inquiries</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <!-- Contact Info -->
+                <div>
+                    <h2>Get In Touch</h2>
+                    <p>Our team is ready to assist you with your medical supply needs. Please visit us or send an
+                        inquiry.</p>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="margin-bottom: 10px;">📍 Address</h4>
+                        <p>Imperial Medical HQ<br>
+                            123 Healthcare Boulevard<br>
+                            Medical City, Country</p>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <h4 style="margin-bottom: 10px;">📞 Phone & Email</h4>
+                        <p>Phone: +1 234 567 890</p>
+                        <p>Email: info@imperialmedical.com</p>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <h4 style="margin-bottom: 10px;">⏰ Working Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 1:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="card">
+                    <h3>Request a Quote</h3>
+                    <form action="#" method="POST"
+                        onsubmit="event.preventDefault(); alert('Thank you for your message. This is a demo form.');">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="org">Organization / Hospital</label>
+                            <input type="text" id="org" class="form-control" placeholder="Organization Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Request Details</label>
+                            <select id="subject" class="form-control">
+                                <option>General Inquiry</option>
+                                <option>Product Quotation</option>
+                                <option>Technical Support</option>
+                                <option>Partnership Proposal</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section
+        style="height: 400px; background-color: #ddd; display: flex; align-items: center; justify-content: center;">
+        <h3 style="color: #666;">Google Maps Placeholder</h3>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Imperial Medical Ltd</h4>
+                    <p>Delivering excellence in healthcare solutions aiming to improve patient outcomes.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>info@imperialmedical.com</p>
+                    <p>+1 234 567 890</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Imperial Medical Ltd. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
