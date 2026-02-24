@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    // Toggle hamburger menu
+    // Toggle hamburger menu(تبديل قائمة الهامبرغر)
     if (hamburger) {
         hamburger.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -48,4 +48,97 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // ========== إضافة كود الكاروسيل هنا ==========
+    // عناصر الكاروسيل
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+
+    // التحقق من وجود عناصر الكاروسيل قبل تنفيذ الكود (لتجنب الأخطاء إذا لم يكن موجوداً)
+    if (slides.length > 0 && prevBtn && nextBtn && dotsContainer) {
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let autoSlideInterval;
+
+        // إنشاء نقاط الترقيم تلقائياً
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.dataset.index = i;
+            if (i === 0) dot.classList.add('active');
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        // دالة لعرض الشريحة المحددة
+        function showSlide(index) {
+            // إخفاء جميع الشرائح
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // إظهار الشريحة المطلوبة
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentIndex = index;
+        }
+
+        // الانتقال إلى التالية
+        function nextSlide() {
+            const newIndex = (currentIndex + 1) % totalSlides;
+            showSlide(newIndex);
+        }
+
+        // الانتقال إلى السابقة
+        function prevSlide() {
+            const newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(newIndex);
+        }
+
+        // أحداث الأزرار
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        // أحداث النقاط
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const index = parseInt(e.target.dataset.index);
+                showSlide(index);
+                resetAutoSlide();
+            });
+        });
+
+        // التشغيل التلقائي كل 6 ثوانٍ
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 6000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // بدء التشغيل التلقائي
+        startAutoSlide();
+
+        // إيقاف التشغيل عند تمرير الماوس فوق hero
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+        }
+    }
 });
+

@@ -451,25 +451,72 @@ header .btn:hover {
     color: var(--primary-color);
 }
 
-/* Hero Section (القسم الرئيسي) */
+/* ===== Hero Section مع كاروسيل ===== */
 .hero {
-    background-image: url('../assets/images/hero-bg.avif');
-    background-color: var(--primary-color);
+    position: relative;
+    /* لكي نضع المحتوى فوق الصور */
+    width: 100%;
+    height: 600px;
+    /* يمكنك تعديل الارتفاع */
+    overflow: hidden;
+    color: white;
+    text-align: center;
+
+}
+
+
+
+
+/* حاوية الصور (الكاروسيل) */
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* كل شريحة */
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    color: white;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* تأثير fade بين الصور */
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* المحتوى النصي */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    /* فوق الصور */
     padding: 120px 0;
+    /* نفس padding القديم */
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.hero h1 {
+.hero-content h1 {
     color: white;
     margin-bottom: 20px;
     font-size: 3rem;
-
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    /* لتحسين القراءة */
 }
 
-.hero p {
+.hero-content p {
     color: #f0f0f0;
     font-size: 1.2rem;
     margin-bottom: 30px;
@@ -480,6 +527,81 @@ header .btn:hover {
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
+    backdrop-filter: blur(3px);
+    /* تأثير زجاجي خفيف */
+}
+
+/* أزرار التنقل */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* نقاط الترقيم */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-dots .dot {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* تحسين للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .carousel-btn {
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
 }
 
 /* Grid Layouts (تخطيط الشبكة) */
@@ -815,5 +937,349 @@ textarea.form-control {
 
     .copyright {
         font-size: 0.8rem;
+    }
+}
+
+
+
+
+/* ===== تذييل INQUIRIES ===== */
+#footer {
+    background-color: #1f4e79;
+    color: #f0f4f8;
+    padding: 60px 0 30px;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    /* [تم التعديل] تغيير الخط إلى Inter ليتوافق مع الموقع */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    direction: ltr;
+}
+
+#footer .title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#footer .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #00c6fb, #005bea);
+    border-radius: 2px;
+}
+
+#footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* نظام الشبكة العام */
+#footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+#footer .col-6 {
+    width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* أعمدة متجاوبة */
+@media (max-width: 992px) {
+    #footer .col-12-medium {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer .col-12-small {
+        width: 100%;
+    }
+}
+
+/* قسم الميزات (feature-list) */
+#footer .feature-list {
+    margin-bottom: 30px;
+}
+
+/* تنسيق الأعمدة داخل feature-list (مع إضافة Flexbox للتمدد) */
+#footer .feature-list .col-6 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الصناديق (sections) */
+#footer .feature-list section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* أو flex-start حسب الرغبة */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 25px 20px;
+    /* قيمة موحدة */
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 150px;
+    /* يمكنك تعديل الرقم */
+}
+
+#footer .feature-list section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 198, 251, 0.3);
+}
+
+#footer .feature-list h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+#footer .feature-list h3 i {
+    color: #00c6fb;
+    font-size: 1.2rem;
+    width: 24px;
+}
+
+#footer .feature-list p {
+    color: #cbd5e0;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+#footer .feature-list a {
+    color: #00c6fb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer .feature-list a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ===== أيقونات التواصل الاجتماعي ===== */
+.example-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+}
+
+.icon-content {
+    position: relative;
+    margin: 0;
+}
+
+.icon-content a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.icon-content a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00c6fb, #005bea);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.icon-content a:hover::before {
+    transform: scale(1);
+}
+
+.icon-content a:hover {
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 198, 251, 0.4);
+}
+
+/* ===== [إضافة جديدة] تنسيق أيقونات Font Awesome داخل الروابط ===== */
+.icon-content a i {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* إخفاء أي SVG قديم (احتياطي) */
+.icon-content svg {
+    display: none;
+}
+
+
+.icon-content .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2d3748;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== تنسيق معلومات الاتصال ===== */
+#footer .feature-list .fa-phone,
+#footer .feature-list .fa-fax {
+    margin-right: 5px;
+    /* [تم التعديل] إضافة لون موحد للأيقونات */
+    color: #00c6fb;
+}
+
+#footer .feature-list .fa-fax {
+    font-size: 1rem;
+}
+
+/* ===== حقوق النشر ===== */
+#copyright {
+    text-align: center;
+    margin-top: -10px;
+    /*المسافه الفاصله والبطاقات*/
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#copyright ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #a0aec0;
+}
+
+#copyright ul li a {
+    color: #00c6fb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#copyright ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ===== تحسينات للشاشات الصغيرة ===== */
+@media (max-width: 768px) {
+    #footer .title {
+        font-size: 1.8rem;
+    }
+
+    #footer .feature-list .col-6 {
+        width: 100%;
+    }
+
+    #footer .feature-list section {
+        padding: 20px 15px;
+    }
+
+    #copyright ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/*اضافة صورة خلفية الى قسم الاتصال*/
+.contact-header {
+    /* المسار إلى الصورة التي تريدها */
+    background-image: url('../assets/images/contact-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* ارتفاع القسم - يمكنك تعديله حسب رغبتك */
+    min-height: 350px;
+
+    /* محاذاة النص في المنتصف عمودياً */
+    display: flex;
+    align-items: center;
+
+    /* لون النص (أبيض ليتناسب مع التغميق) */
+    color: #ffffff;
+}
+
+.contact-header h1 {
+    color: #ffffff;
+    /* تأكيد أن العنوان أبيض */
+    font-size: 3rem;
+    /* يمكنك تعديل الحجم */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* ظل للنص لمزيد من الوضوح */
+}
+
+.contact-header p {
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .contact-header {
+        min-height: 250px;
+    }
+
+    .contact-header h1 {
+        font-size: 2.2rem;
     }
 }

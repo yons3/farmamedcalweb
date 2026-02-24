@@ -47,11 +47,31 @@
 
     <!-- Hero Section (القسم الرئيسي) -->
     <section class="hero">
-        <div class="container">
+        <!-- حاوية الصور المتحركة (كاروسيل) -->
+        <div class="hero-carousel">
+            <div class="carousel-slide active" style="background-image: url('assets/images/hero-bg.avif');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/slide1.png');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/slide2.png');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/slide3.png');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/slide4.png');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/slide4(1).jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/slide5.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/slide6.jpg');"></div>
+        </div>
+
+        <!-- المحتوى النصي (يظهر فوق الصور) -->
+        <div class="container hero-content">
             <h1>Imperial Medical for Drugs and Medical Supplies Ltd</h1>
             <p>Healthcare & Water Treatment Solutions.</p>
             <!-- <a href="contact.html" class="btn">Request a Quote</a> -->
         </div>
+
+        <!-- أزرار التنقل (اختياري) -->
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+
+        <!-- نقاط الترقيم -->
+        <div class="carousel-dots"></div>
     </section>
 
     <!-- Introduction -->
