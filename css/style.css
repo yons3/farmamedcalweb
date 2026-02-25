@@ -627,7 +627,7 @@ header .btn:hover {
 
 /* Cards (البطاقات) */
 .card {
-    background: white;
+    background: rgb(244, 240, 240);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -644,6 +644,25 @@ header .btn:hover {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 20px;
+}
+/* جعل روابط الأقسام تملأ خلية الشبكة بالكامل */
+.division-link {
+    display: block;          /* أو inline-block, المهم أن يأخذ المساحة */
+    height: 100%;            /* يأخذ ارتفاع الخلية */
+    text-decoration: none;
+    color: inherit;
+}
+
+/* جعل البطاقة تأخذ الارتفاع الكامل مع الحفاظ على padding ضمن الأبعاد */
+.division-link .card {
+    height: 100%;            /* تملأ ارتفاع الرابط */
+    display: flex;
+    flex-direction: column;  /* العنوان فوق الفقرة */
+    box-sizing: border-box;  /* يشمل padding و border في الارتفاع */
+    /* أي تنسيقات إضافية موجودة للـ card تبقى كما هي */
+}
+.division-link .card p:last-child {
+    margin-bottom: 0;
 }
 
 /* Feature Box (صندوق الميزات) */
@@ -685,14 +704,6 @@ footer {
 
 .footer-links a:hover {
     color: white;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
 }
 
 /* Form */
@@ -947,7 +958,8 @@ textarea.form-control {
 #footer {
     background-color: #1f4e79;
     color: #f0f4f8;
-    padding: 60px 0 30px;
+    padding: 30px 0 30px;
+    /*المسافه العلوية لل العنوان*/
     /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
     /* [تم التعديل] تغيير الخط إلى Inter ليتوافق مع الموقع */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -1190,10 +1202,25 @@ textarea.form-control {
 /* ===== حقوق النشر ===== */
 #copyright {
     text-align: center;
-    margin-top: -10px;
-    /*المسافه الفاصله والبطاقات*/
-    padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /*المسافات الفاصله العلوية والسفلية الخاصة بتذييل INQUIRIES*/
+    /*المسافه الفاصله والبطاقات*/
+    padding-top: 15px;
+    margin-top: -15px;
+    /*المسافه الفاصله العلوية*/
+}
+
+/*مكرر//////////////////////*/
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    /*المسافه الفاصله والبطاقات*/
+    padding-top: 15px;
+    margin-top: -40px;
+    /*المسافه الفاصله العلوية*/
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
 }
 
 #copyright ul {
@@ -1282,4 +1309,168 @@ textarea.form-control {
     .contact-header h1 {
         font-size: 2.2rem;
     }
+}
+
+/* ===== Quick Links (روابط سريعة) ===== */
+.quick-links {
+    height: 100%;
+    /* ليمتد بنفس ارتفاع العمود الآخر */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quick-links h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+}
+
+.quick-links h3 i {
+    color: #00c6fb;
+    font-size: 1.4rem;
+    width: 28px;
+}
+
+.quick-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quick-links-list li {
+    margin: 0;
+    transition: transform 0.2s ease;
+}
+
+.quick-links-list li:hover {
+    transform: translateX(5px);
+    /* حركة بسيطة لليمين عند المرور */
+}
+
+.quick-links-list a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+}
+
+.quick-links-list a i {
+    color: #00c6fb;
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.quick-links-list a:hover {
+    color: #ffffff;
+}
+
+.quick-links-list a:hover i {
+    color: #ffffff;
+}
+
+/* تحسين للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .quick-links-list a {
+        font-size: 1rem;
+        gap: 10px;
+    }
+
+    .quick-links h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* تنسيق قسم المطور والأيقونات */
+.developer-info {
+    display: flex;
+    /* وضع النص والأيقونات في صف واحد */
+    align-items: center;
+    /* محاذاة رأسية في المنتصف */
+    gap: 15px;
+    /* مسافة بين النص والأيقونات */
+}
+
+.developer-social {
+    display: flex;
+    /* الأيقونات أفقياً */
+    gap: 8px;
+    /* مسافة بين الأيقونات */
+    list-style: none;
+    /* إزالة النقاط */
+    margin: -10px;
+    padding: -10px;
+}
+
+.developer-social li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    /* حجم الدائرة */
+    height: 36px;
+    background-color: #ffffff;
+    /* خلفية رمادية فاتحة */
+    border-radius: 40%;
+    /* شكل دائري */
+    color: #333;
+    /* لون الأيقونة */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.developer-social li a:hover {
+    background-color: #0158e4;
+    /* لون مميز عند التحويم */
+    color: #ffffff;
+}
+
+/* لضبط المحاذاة العامة للشريط */
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 576px) {
+    .developer-info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Google Maps موقع الشركة */
+.map-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.map-section iframe {
+    display: block;
 }

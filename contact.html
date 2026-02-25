@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- ملف التنسيقات الرئيسي -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- إزاحة الـ nav يسارًا في هذه الصفحة فقط لأن زر Contact Us محذوف -->
+    <style>
+        header nav {
+            margin-right: 100px;
+        }
+    </style>
     <!-- تنسيقات إضافية لضبط الأيقونات الجديدة داخل الدوائر -->
     <!-- <style>
         /* ضبط أيقونات Font Awesome داخل الروابط الاجتماعية */
@@ -46,15 +52,17 @@
                     <li class="dropdown">
                         <a class="nav-link">Products & Services</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Medical Supplies Division</a></li>
-                            <li><a href="#">Water Treatment Solutions Division</a></li>
-                            <li><a href="#">Technical Services Division</a></li>
-                            <li><a href="#">Sales and Distribution Division</a></li>
-                            <li><a href="#">Projects & Tenders Division</a></li>
+                            <li><a href="./products/medical_supplies_D.html">Medical Supplies Division</a></li>
+                            <li><a href="./products/water_treatment_solutions_D">Water Treatment Solutions Division</a>
+                            </li>
+                            <li><a href="./products/technical_services_D.html">Technical Services Division</a></li>
+                            <li><a href="./products/sales_and_distribution_D.html">Sales and Distribution Division</a>
+                            </li>
+                            <li><a href="./products/projects_and_tenders_D.html">Projects & Tenders Division</a></li>
                         </ul>
                     </li>
                     <li><a href="quality.html" class="nav-link">Quality</a></li>
-                    <li><a href="contact.html" class="nav-link active btn">Request a Quote</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -132,94 +140,55 @@
             </div>
         </div>
     </section>
-
-    <!-- Map Placeholder -->
-    <section
-        style="height: 400px; background-color: #ddd; display: flex; align-items: center; justify-content: center;">
-        <h3 style="color: #666;">Google Maps Placeholder</h3>
+        
+    <!-- Google Maps موقع الشركة -->
+    <section class="map-section">
+        <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.979681!3d40.697488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1698765432100!5m2!1sen!2s" 
+                width="100%" 
+                height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="موقع Imperial Medical Ltd">
+        </iframe>
     </section>
 
     <!-- Footer -->
-    <section id="footer" class="wrapper">
-        <div class="title">INQUIRIES</div>
+    <footer>
         <div class="container">
-
-            <div class="row">
-
-                <div class="col-6 col-12-medium">
-
-                    <!-- Contact -->
-                    <section class="feature-list small">
-                        <div class="row">
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3><i class="fas fa-home"></i> Mailing Address</h3>
-                                    <p>
-                                        Untitled Corp<br />
-                                        1234 Somewhere Rd
-                                    </p>
-                                </section>
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3><i class="fas fa-comment"></i> Social</h3>
-
-                                    <ul class="example-2">
-                                        <!-- WhatsApp -->
-                                        <li class="icon-content">
-                                            <a href="https://wa.me/qr/l2ASLOEJ5AXUE1" target="_blank"
-                                                aria-label="WhatsApp">
-                                                <i class="fab fa-whatsapp"></i>
-                                            </a>
-                                            <div class="tooltip">WhatsApp</div>
-                                        </li>
-                                        <!-- Facebook -->
-                                        <li class="icon-content">
-                                            <a href="https://www.facebook.com/profile.php?id=100073845374430"
-                                                target="_blank" aria-label="Facebook">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </a>
-                                            <div class="tooltip">Facebook</div>
-                                        </li>
-                                        <!-- Instagram -->
-                                        <li class="icon-content">
-                                            <a href="https://www.instagram.com/yons_al_srory" target="_blank"
-                                                aria-label="Instagram">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                            <div class="tooltip">Instagram</div>
-                                        </li>
-                                    </ul>
-
-                                </section>
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3><i class="fas fa-envelope"></i> Email</h3>
-                                    <p>
-                                        <a href="mailto:ywnsalsrwry3@gmail.com">ywnsalsrwry3@gmail.com</a>
-                                    </p>
-                                </section>
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3><i class="fas fa-phone"></i> (YE) 773 387 024</h3>
-                                    <p><i class="fas fa-fax"></i> 101035965</p>
-                                </section>
-                            </div>
-                        </div>
-                    </section>
-
+            <div class="copyright">
+                <div class="copyright-left">
+                    © 2026 Imperial Medical Ltd. All Rights Reserved.
+                </div>
+                <div class="developer-info">
+                    <span>DEV: Yons AL_Srory & Mohammed AL_Rubaidi :</span>
+                    <ul class="developer-social">
+                        <!-- Instagram -->
+                        <li>
+                            <a class="yo" href="https://www.instagram.com/yons_al_srory" target="_blank"
+                                aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <!-- LinkedIn (ضع الرابط المناسب أو احذف إذا لم يتوفر) -->
+                        <li>
+                            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <!-- Facebook (نفس حساب المطور أو رابط آخر) -->
+                        <li>
+                            <a href="https://www.facebook.com/your-profile" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div id="copyright">
-                <ul>
-                    <li>&copy; حقوق النشر محفوظة.</li>
-                    <li>YONS ALSRORY: <a href="https://www.instagram.com/yons_al_srory">INSTAGRAM</a></li>
-                </ul>
-            </div>
         </div>
-    </section>
+    </footer>
 
     <!-- رابط ملف الجافاسكريبت (إذا كان موجوداً) -->
     <script src="js/script.js"></script>
