@@ -1474,3 +1474,103 @@ textarea.form-control {
 .map-section iframe {
     display: block;
 }
+
+
+.product-image {
+    transition: transform 0.3s ease;
+}
+.product-image:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+
+
+.products-hero {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url("../products/medical-bg.jpg"); /* ضع رابط صورتك هنا */
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+}
+
+/* الخلفية الزرقاء المائلة */
+.products-hero .overlay {
+    background: #1f4e79;
+    width: 52%;
+    height: 100%;
+    clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
+    
+    display: flex;
+    flex-direction: column;  /* مهم */
+    justify-content: center; /* توسيط عمودي */
+    padding-left: 60px;
+}
+
+.products-hero h1 {
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+
+}
+.products-hero p {
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    max-width: 400px;
+    line-height: 1.6;
+    
+}
+
+/*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
+.products-hero h1,
+.products-hero p {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.products-hero p {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*تنسيق ومطابقة لنسخة الموبايل*/
+@media (max-width: 768px) {
+    .products-hero {
+        height: 300px;
+        background-position: center;
+    }
+
+    .products-hero .overlay {
+        width: 100%;
+        clip-path: none;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .products-hero h1 {
+        font-size: 28px;
+    }
+
+    .products-hero p {
+        font-size: 16px;
+        margin: 10px auto 0;
+    }
+}
