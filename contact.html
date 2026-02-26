@@ -85,30 +85,45 @@
                         inquiry.</p>
 
                     <div style="margin-top: 30px;">
-                        <h4 style="margin-bottom: 10px;">📍 Address</h4>
+                        <h4 style="margin-bottom: 10px;">🗺️ Our Location</h4>
                         <p>Imperial Medical HQ<br>
-                            123 Healthcare Boulevard<br>
-                            Medical City, Country</p>
+                            Head Office Address:<br>
+                            Al-Hashidi Building,
+                            Mujahed Street,
+                            Sana'a, Yemen</p>
                     </div>
 
                     <div style="margin-top: 20px;">
-                        <h4 style="margin-bottom: 10px;">📞 Phone & Email</h4>
-                        <p>Phone: +1 234 567 890</p>
-                        <p>Email: info@imperialmedical.com</p>
+                        <h4 style="margin-bottom: 10px;">📞 Our Contacts & Email</h4>
+                        <p>Phone/Fax: +967-1-501263</p>
+                        <p>Email: info@imperial-medica.com</p>
                     </div>
 
                     <div style="margin-top: 20px;">
-                        <h4 style="margin-bottom: 10px;">⏰ Working Hours</h4>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                            Saturday: 9:00 AM - 1:00 PM</p>
+                        <h4 style="margin-bottom: 10px;">👔 Contact Person </h4>
+                        <p>Contact Person<br>
+                          Eng. Aiman Eshaq 
+                          General Manager
+                          <br>Phone: +967-1-501263 Ext. 102
+                          <br>Mobile: +967-771118657
+                          <br>Email: aiman.eshaq@imperial-medica.com  
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h4 style="margin-bottom: 10px;">⏳ Working Hours</h4>
+                        <p>Saturday - Thursday: 9:00 AM - 1:00 PM</p>
                     </div>
                 </div>
 
                 <!-- Contact Form (demo)-->
                 <div class="card">
                     <h3>Request a Quote</h3>
-                    <form action="#" method="POST"
-                        onsubmit="event.preventDefault(); alert('Thank you for your message. This is a demo form.');">
+                    <form action="https://formsubmit.co/info@imperial-medica.com" method="POST">
+                        <!-- حقول الحماية والإعادة التوجيه -->
+                       <input type="hidden" name="_captcha" value="true">
+                       <input type="hidden" name="_next" value="https://yons3.github.io/farmamedcalweb/thank-you.html"> <!-- غيّر الرابط -->
+                       <input type="hidden" name="_autoresponse" value="Thank you for contacting Imperial Medical Ltd. We will get back to you soon.">
+
+
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" class="form-control" placeholder="Your Name" required>
