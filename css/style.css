@@ -501,7 +501,8 @@ header .btn:hover {
     position: relative;
     z-index: 10;
     /* فوق الصور */
-    padding: 120px 0;
+    padding: 200px 0;
+    /*خاص ب مكان النص في الصفحة الرئيسية فوق الصور المتحركة*/
     /* نفس padding القديم */
     max-width: 800px;
     margin: 0 auto;
@@ -509,7 +510,7 @@ header .btn:hover {
 }
 
 .hero-content h1 {
-    color: white;
+    color: #1a5286;
     margin-bottom: 20px;
     font-size: 3rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -517,18 +518,18 @@ header .btn:hover {
 }
 
 .hero-content p {
-    color: #f0f0f0;
+    color: #ffffff;
     font-size: 1.2rem;
     margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    /*background-color: rgba(0, 0, 0, 0.5);خاص ب الخلفية السوداء وراء النص*/
+    color: #1a5286;
     padding: 10px 20px;
     border-radius: 8px;
-    backdrop-filter: blur(3px);
-    /* تأثير زجاجي خفيف */
+    /*backdrop-filter: blur(3px);*/
+    /* تأثير زجاجي خفيف خلف النص*/
 }
 
 /* أزرار التنقل */
