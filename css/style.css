@@ -387,14 +387,14 @@ header .container {
     /* min-height: 40px;*/
 }
 
-.logo span {
+/*.logo span {
     display: inline-block;
     line-height: 1.2;
-    border-bottom: 2px solid currentColor;
-    /* الخط سيأخذ نفس لون النص دائماً */
-    padding-bottom: 2px;
-    /* مسافة بسيطة بين النص والخط */
-}
+    border-bottom: 2px solid currentColor;*/
+/* الخط سيأخذ نفس لون النص دائماً */
+/* padding-bottom: 2px;*/
+/* مسافة بسيطة بين النص والخط */
+/*}*/
 
 .nav-menu {
     display: flex;
@@ -645,22 +645,29 @@ header .btn:hover {
     color: var(--primary-color);
     margin-bottom: 20px;
 }
+
 /* جعل روابط الأقسام تملأ خلية الشبكة بالكامل */
 .division-link {
-    display: block;          /* أو inline-block, المهم أن يأخذ المساحة */
-    height: 100%;            /* يأخذ ارتفاع الخلية */
+    display: block;
+    /* أو inline-block, المهم أن يأخذ المساحة */
+    height: 100%;
+    /* يأخذ ارتفاع الخلية */
     text-decoration: none;
     color: inherit;
 }
 
 /* جعل البطاقة تأخذ الارتفاع الكامل مع الحفاظ على padding ضمن الأبعاد */
 .division-link .card {
-    height: 100%;            /* تملأ ارتفاع الرابط */
+    height: 100%;
+    /* تملأ ارتفاع الرابط */
     display: flex;
-    flex-direction: column;  /* العنوان فوق الفقرة */
-    box-sizing: border-box;  /* يشمل padding و border في الارتفاع */
+    flex-direction: column;
+    /* العنوان فوق الفقرة */
+    box-sizing: border-box;
+    /* يشمل padding و border في الارتفاع */
     /* أي تنسيقات إضافية موجودة للـ card تبقى كما هي */
 }
+
 .division-link .card p:last-child {
     margin-bottom: 0;
 }
@@ -1482,15 +1489,18 @@ textarea.form-control {
 .product-image {
     transition: transform 0.3s ease;
 }
+
 .product-image:hover {
     transform: scale(1.02);
 }
+
 /*تنسيق عنوان الصفحه الخاص بالقسم الاول تبع المنتجات*/
 .products-hero1 {
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url("../products/medical-bg.png"); /* ضع رابط صورتك هنا */
+    background-image: url("../products/medical-bg.png");
+    /* ضع رابط صورتك هنا */
     background-size: cover;
     background-position: center right;
     display: flex;
@@ -1503,10 +1513,12 @@ textarea.form-control {
     width: 52%;
     height: 100%;
     clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-    
+
     display: flex;
-    flex-direction: column;  /* مهم */
-    justify-content: center; /* توسيط عمودي */
+    flex-direction: column;
+    /* مهم */
+    justify-content: center;
+    /* توسيط عمودي */
     padding-left: 30px;
 }
 
@@ -1518,13 +1530,14 @@ textarea.form-control {
     margin: 0;
 
 }
+
 .products-hero1 p {
     color: white;
     font-size: 18px;
     margin-top: 15px;
     max-width: 400px;
     line-height: 1.6;
-    
+
 }
 
 /*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
@@ -1543,6 +1556,7 @@ textarea.form-control {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -1578,7 +1592,8 @@ textarea.form-control {
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url("../products/medical-bg.png"); /* ضع رابط صورتك هنا */
+    background-image: url("../products/medical-bg.png");
+    /* ضع رابط صورتك هنا */
     background-size: cover;
     background-position: center right;
     display: flex;
@@ -1591,10 +1606,12 @@ textarea.form-control {
     width: 52%;
     height: 100%;
     clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-    
+
     display: flex;
-    flex-direction: column;  /* مهم */
-    justify-content: center; /* توسيط عمودي */
+    flex-direction: column;
+    /* مهم */
+    justify-content: center;
+    /* توسيط عمودي */
     padding-left: 30px;
 }
 
@@ -1606,13 +1623,14 @@ textarea.form-control {
     margin: 0;
 
 }
+
 .products-hero2 p {
     color: white;
     font-size: 18px;
     margin-top: 15px;
     max-width: 400px;
     line-height: 1.6;
-    
+
 }
 
 /*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
@@ -1631,6 +1649,7 @@ textarea.form-control {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -1666,7 +1685,8 @@ textarea.form-control {
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url("../products/medical-bg.png"); /* ضع رابط صورتك هنا */
+    background-image: url("../products/medical-bg.png");
+    /* ضع رابط صورتك هنا */
     background-size: cover;
     background-position: center right;
     display: flex;
@@ -1679,10 +1699,12 @@ textarea.form-control {
     width: 54%;
     height: 100%;
     clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-    
+
     display: flex;
-    flex-direction: column;  /* مهم */
-    justify-content: center; /* توسيط عمودي */
+    flex-direction: column;
+    /* مهم */
+    justify-content: center;
+    /* توسيط عمودي */
     padding-left: 30px;
 }
 
@@ -1694,13 +1716,14 @@ textarea.form-control {
     margin: 0;
 
 }
+
 .products-hero3 p {
     color: white;
     font-size: 18px;
     margin-top: 15px;
     max-width: 400px;
     line-height: 1.6;
-    
+
 }
 
 /*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
@@ -1719,6 +1742,7 @@ textarea.form-control {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -1754,7 +1778,8 @@ textarea.form-control {
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url("../products/medical-bg.png"); /* ضع رابط صورتك هنا */
+    background-image: url("../products/medical-bg.png");
+    /* ضع رابط صورتك هنا */
     background-size: cover;
     background-position: center right;
     display: flex;
@@ -1767,10 +1792,12 @@ textarea.form-control {
     width: 58%;
     height: 100%;
     clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-    
+
     display: flex;
-    flex-direction: column;  /* مهم */
-    justify-content: center; /* توسيط عمودي */
+    flex-direction: column;
+    /* مهم */
+    justify-content: center;
+    /* توسيط عمودي */
     padding-left: 30px;
 }
 
@@ -1782,13 +1809,14 @@ textarea.form-control {
     margin: 0;
 
 }
+
 .products-hero4 p {
     color: white;
     font-size: 18px;
     margin-top: 15px;
     max-width: 400px;
     line-height: 1.6;
-    
+
 }
 
 /*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
@@ -1807,6 +1835,7 @@ textarea.form-control {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -1843,7 +1872,8 @@ textarea.form-control {
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url("../products/medical-bg.png"); /* ضع رابط صورتك هنا */
+    background-image: url("../products/medical-bg.png");
+    /* ضع رابط صورتك هنا */
     background-size: cover;
     background-position: center right;
     display: flex;
@@ -1856,10 +1886,12 @@ textarea.form-control {
     width: 54%;
     height: 100%;
     clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-    
+
     display: flex;
-    flex-direction: column;  /* مهم */
-    justify-content: center; /* توسيط عمودي */
+    flex-direction: column;
+    /* مهم */
+    justify-content: center;
+    /* توسيط عمودي */
     padding-left: 30px;
 }
 
@@ -1871,13 +1903,14 @@ textarea.form-control {
     margin: 0;
 
 }
+
 .products-hero5 p {
     color: white;
     font-size: 18px;
     margin-top: 15px;
     max-width: 400px;
     line-height: 1.6;
-    
+
 }
 
 /*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
@@ -1896,6 +1929,7 @@ textarea.form-control {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
