@@ -2093,6 +2093,36 @@ textarea.form-control {
     margin: 5px 0 0;
 }
 
+/* تنسيق الأيقونات داخل معلومات العضو */
+.member-name i,
+.member-email i,
+.member-phone i {
+    margin-right: 8px;
+    /* مسافة بين الأيقونة والنص */
+    color: #0066b3;
+    /* لون مميز (يمكن تغييره) */
+    width: 16px;
+    /* عرض ثابت لمحاذاة أفضل */
+    text-align: center;
+    font-size: 0.95rem;
+    /* حجم متناسق مع النص */
+}
+
+/* إذا أردت لوناً مختلفاً للأيقونات عند التحويم */
+.member-email:hover i {
+    color: #004999;
+    /* أزرق أغمق عند المرور */
+}
+
+/* تحسين محاذاة البريد والهاتف مع الأيقونة */
+.member-email,
+.member-phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* مسافة إضافية بين الأيقونة والنص */
+}
+
 /* ===== Container-team ===== */
 .container-team {
     max-width: 1200px;
