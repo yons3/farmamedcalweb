@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Imperial Medical Ltd</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* تنسيقات إضافية للصور الدائرية */
+        .team-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-image {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #0066b3;
+            box-shadow: 0 4px 10px rgba(0, 102, 179, 0.2);
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .member-info {
+            flex: 1;
+        }
+
+        .member-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a2b3c;
+            margin: 0 0 5px 0;
+        }
+
+        .member-position {
+            font-size: 0.85rem;
+            color: #0066b3;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .member-email {
+            display: block;
+            color: #5a6b7a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        .member-email:hover {
+            color: #0066b3;
+            text-decoration: underline;
+        }
+
+        .member-phone {
+            color: #5a6b7a;
+            font-size: 0.9rem;
+            margin: 5px 0 0;
+        }
+
+        @media (max-width: 576px) {
+            .team-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .member-image {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .page-header {
+            background-color: #f5f7fa;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #eaeef2;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a2b3c;
+            margin: 0;
+        }
+
+        .filter-section {
+            padding: 30px 0 20px;
+            border-bottom: 1px solid #eaeef2;
+        }
+
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5a6b7a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .filter-btn:hover {
+            color: #0066b3;
+            background-color: #f0f4f8;
+        }
+
+        .filter-btn.active {
+            color: #0066b3;
+            font-weight: 600;
+            background-color: #e6f0fa;
+        }
+
+        .team-section {
+            padding: 20px 0 60px;
+        }
+
+        .team-category {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0066b3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0066b3;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- يمكنك إضافة الهيدر هنا -->
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a class="logo">
+                <img src="assets/images/fallback.png" alt="Imperial Medical Ltd">
+                <span>Imperial Medical Ltd</span>
+            </a>
+            <div class="hamburger">☰</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="dropdown">
+                        <a class="nav-link">Products & Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./products/medical_supplies_D.html">Medical Supplies Division</a></li>
+                            <li><a href="./products/water_treatment_solutions_D">Water Treatment Solutions Division</a>
+                            </li>
+                            <li><a href="./products/technical_services_D.html">Technical Services Division</a></li>
+                            <li><a href="./products/sales_and_distribution_D.html">Sales and Distribution Division</a>
+                            </li>
+                            <li><a href="./products/projects_and_tenders_D.html">Projects & Tenders Division</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="quality.html" class="nav-link">Quality</a></li>
+                    <li><a href="our_team.html" class="nav-link active">Our Team</a></li>
+                    <li><a href="contact.html" class="nav-link btn">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <div class="container-team">
+            <h1>Our Team</h1>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Management</button>
+                <button class="filter-btn">Customer service</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="team-section">
+        <div class="container">
+            <!-- Management Section -->
+            <div class="team-category">
+                <h2 class="category-title">MANAGEMENT</h2>
+                <div class="team-grid">
+                    <!-- Member 1 -->
+                    <div class="team-card">
+                        <div class="member-image">
+                            <img src="assets/images/img-tem/home-banner.jpg" alt="Juha-Pekka Nuutinen"
+                                onerror="this.src='https://via.placeholder.com/80x80/0066b3/ffffff?text=JPN'">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Juha-Pekka Nuutinen</h3>
+                            <p class="member-position">CEO</p>
+                            <a href="mailto:juha-pekka.nuutinen@labquality.com"
+                                class="member-email">juha-pekka.nuutinen@labquality.com</a>
+                            <p class="member-phone">+358 40 828 3210</p>
+                        </div>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="team-card">
+                        <div class="member-image">
+                            <img src="assets/images/img-tem/about.jpg" alt="Antti Ojala"
+                                onerror="this.src='https://via.placeholder.com/80x80/0066b3/ffffff?text=AO'">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Antti Ojala</h3>
+                            <p class="member-position">CFO</p>
+                            <a href="mailto:antti.ojala@labquality.com"
+                                class="member-email">antti.ojala@labquality.com</a>
+                            <p class="member-phone">+358 40 828 3210</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Service Section -->
+            <div class="team-category">
+                <h2 class="category-title">CUSTOMER SERVICE</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="member-image">
+                            <img src="assets/images/img-tem/home-banner.jpg" alt="Minna Kankainen"
+                                onerror="this.src='https://via.placeholder.com/80x80/0066b3/ffffff?text=MK'">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Minna Kankainen</h3>
+                            <p class="member-position">Customer Service Manager</p>
+                            <a href="mailto:minna.kankainen@labquality.com"
+                                class="member-email">minna.kankainen@labquality.com</a>
+                            <p class="member-phone">+358 45 131 1682</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="member-image">
+                            <img src="assets/images/img-tem/about.jpg" alt="Minna Kankainen"
+                                onerror="this.src='https://via.placeholder.com/80x80/0066b3/ffffff?text=MK'">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Minna Kankainen</h3>
+                            <p class="member-position">Customer Service Manager</p>
+                            <a href="mailto:minna.kankainen@labquality.com"
+                                class="member-email">minna.kankainen@labquality.com</a>
+                            <p class="member-phone">+358 45 131 1682</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <div class="copyright-left">
+                    © 2026 Imperial Medical Ltd. All Rights Reserved.
+                </div>
+                <div class="developer-info">
+                    <span>DEV: Yons AL_Srory & Mohammed AL_Rubaidi :</span>
+                    <ul class="developer-social">
+                        <!-- Instagram -->
+                        <li>
+                            <a href="https://www.instagram.com/yons_al_srory" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <!-- LinkedIn (ضع الرابط المناسب أو احذف إذا لم يتوفر) -->
+                        <li>
+                            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <!-- Facebook (نفس حساب المطور أو رابط آخر) -->
+                        <li>
+                            <a href="https://www.facebook.com/your-profile" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- يمكنك إضافة الفوتر هنا -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // أزرار التصفية
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            // جميع بطاقات الفريق
+            const teamCards = document.querySelectorAll('.team-card');
+            // جميع أقسام الفريق (Management, EQA, etc.)
+            const teamCategories = document.querySelectorAll('.team-category');
+
+            // إضافة حدث النقر لكل زر
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // إزالة كلاس active من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة كلاس active للزر المضغوط
+                    this.classList.add('active');
+
+                    // الحصول على قيمة الفلتر (النص داخل الزر)
+                    const filterValue = this.textContent.trim().toLowerCase();
+
+                    // تطبيق التصفية
+                    filterTeams(filterValue);
+                });
+            });
+
+            // دالة التصفية
+            function filterTeams(filter) {
+                if (filter === 'all') {
+                    // إظهار جميع الأقسام
+                    teamCategories.forEach(category => {
+                        category.style.display = 'block';
+                    });
+                } else {
+                    // إخفاء جميع الأقسام أولاً
+                    teamCategories.forEach(category => {
+                        category.style.display = 'none';
+                    });
+
+                    // إظهار القسم المطابق للفلتر
+                    teamCategories.forEach(category => {
+                        const categoryTitle = category.querySelector('.category-title').textContent.trim().toLowerCase();
+                        if (categoryTitle.includes(filter)) {
+                            category.style.display = 'block';
+                        }
+                    });
+                }
+            }
+
+            // Optional: إضافة تأثير بحث بالكلمات المفتاحية
+            // يمكنك إضافة المزيد من التحسينات هنا
+        });
+    </script>
+</body>
+
+</html>

@@ -1959,3 +1959,167 @@ textarea.form-control {
         margin: 10px auto 0;
     }
 }
+
+
+
+
+
+
+/* ===== Page Header ===== */
+.page-header {
+    background-color: #f5f7fa;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid #eaeef2;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a2b3c;
+    margin: 0;
+}
+
+/* ===== Filter Tabs ===== */
+.filter-section {
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #eaeef2;
+}
+
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #5a6b7a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.filter-btn:hover {
+    color: #0066b3;
+    background-color: #f0f4f8;
+}
+
+.filter-btn.active {
+    color: #0066b3;
+    font-weight: 600;
+    background-color: #e6f0fa;
+}
+
+/* ===== Team Section ===== */
+.team-section {
+    padding: 40px 0 60px;
+}
+
+.team-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0066b3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0066b3;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a2b3c;
+    margin: 0 0 5px 0;
+}
+
+.member-position {
+    font-size: 0.85rem;
+    color: #0066b3;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-email {
+    display: block;
+    color: #5a6b7a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+.member-email:hover {
+    color: #0066b3;
+    text-decoration: underline;
+}
+
+.member-phone {
+    color: #5a6b7a;
+    font-size: 0.9rem;
+    margin: 5px 0 0;
+}
+
+/* ===== Container-team ===== */
+.container-team {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .filter-tabs {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-title {
+        font-size: 1rem;
+    }
+}
