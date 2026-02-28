@@ -140,5 +140,43 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // ========== Our Team Filter (our_team.html فقط) ==========
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const teamCategories = document.querySelectorAll('.team-category');
+
+    // تشغيل كود الفلتر فقط إذا كانت العناصر موجودة في الصفحة
+    if (filterButtons.length > 0 && teamCategories.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // إزالة كلاس active من جميع الأزرار
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // إضافة كلاس active للزر المضغوط
+                this.classList.add('active');
+
+                // الحصول على قيمة الفلتر
+                const filterValue = this.textContent.trim().toLowerCase();
+                filterTeams(filterValue);
+            });
+        });
+
+        function filterTeams(filter) {
+            if (filter === 'all') {
+                teamCategories.forEach(category => {
+                    category.style.display = 'block';
+                });
+            } else {
+                teamCategories.forEach(category => {
+                    category.style.display = 'none';
+                });
+                teamCategories.forEach(category => {
+                    const categoryTitle = category.querySelector('.category-title').textContent.trim().toLowerCase();
+                    if (categoryTitle.includes(filter)) {
+                        category.style.display = 'block';
+                    }
+                });
+            }
+        }
+    }
 });
 
