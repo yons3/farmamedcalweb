@@ -1218,7 +1218,7 @@ textarea.form-control {
     /*المسافه الفاصله العلوية*/
 }
 
-/*مكرر//////////////////////*/
+/*مكرر//////////////////////تم تعديل التكرار واضافه الاكواد هنا*/
 .copyright {
     text-align: center;
     margin-top: 20px;
@@ -1229,6 +1229,11 @@ textarea.form-control {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #copyright ul {
@@ -1452,14 +1457,6 @@ textarea.form-control {
     color: #ffffff;
 }
 
-/* لضبط المحاذاة العامة للشريط */
-.copyright {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
 @media (max-width: 576px) {
     .developer-info {
