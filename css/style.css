@@ -1496,11 +1496,11 @@ textarea.form-control {
 }
 
 /*تنسيق عنوان الصفحه الخاص بالقسم الاول تبع المنتجات*/
-.products-hero1 {
+.products-hero {
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url("../products/medical-bg.png");
+    /* background-image: url("../products/medical-bg.png");*/
     /* ضع رابط صورتك هنا */
     background-size: cover;
     background-position: center right;
@@ -1509,9 +1509,9 @@ textarea.form-control {
 }
 
 /* الخلفية الزرقاء المائلة */
-.products-hero1 .overlay1 {
+.products-hero .overlay {
     background: #1f4e79;
-    width: 52%;
+    width: 56%;
     height: 100%;
     clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
 
@@ -1523,7 +1523,7 @@ textarea.form-control {
     padding-left: 30px;
 }
 
-.products-hero1 h1 {
+.products-hero h1 {
     color: white;
     font-size: 42px;
     font-weight: 700;
@@ -1532,7 +1532,7 @@ textarea.form-control {
 
 }
 
-.products-hero1 p {
+.products-hero p {
     color: white;
     font-size: 18px;
     margin-top: 15px;
@@ -1542,13 +1542,13 @@ textarea.form-control {
 }
 
 /*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
-.products-hero1 h1,
-.products-hero1 p {
+.products-hero h1,
+.products-hero p {
     animation: fadeUp 1s ease forwards;
     opacity: 0;
 }
 
-.products-hero1 p {
+.products-hero p {
     animation-delay: 0.3s;
 }
 
@@ -1566,402 +1566,27 @@ textarea.form-control {
 
 /*تنسيق ومطابقة لنسخة الموبايل*/
 @media (max-width: 768px) {
-    .products-hero1 {
+    .products-hero {
         height: 300px;
         background-position: center;
     }
 
-    .products-hero1 .overlay1 {
+    .products-hero .overlay {
         width: 100%;
         clip-path: none;
         padding: 30px;
         text-align: center;
     }
 
-    .products-hero1 h1 {
+    .products-hero h1 {
         font-size: 28px;
     }
 
-    .products-hero1 p {
+    .products-hero p {
         font-size: 16px;
         margin: 10px auto 0;
     }
 }
-
-/*تنسيق عنوان الصفحه الخاص بالقسم الثاني تبع المنتجات*/
-.products-hero2 {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-image: url("../products/medical-bg.png");
-    /* ضع رابط صورتك هنا */
-    background-size: cover;
-    background-position: center right;
-    display: flex;
-    align-items: center;
-}
-
-/* الخلفية الزرقاء المائلة */
-.products-hero2 .overlay2 {
-    background: #1f4e79;
-    width: 52%;
-    height: 100%;
-    clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-
-    display: flex;
-    flex-direction: column;
-    /* مهم */
-    justify-content: center;
-    /* توسيط عمودي */
-    padding-left: 30px;
-}
-
-.products-hero2 h1 {
-    color: white;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
-
-}
-
-.products-hero2 p {
-    color: white;
-    font-size: 18px;
-    margin-top: 15px;
-    max-width: 400px;
-    line-height: 1.6;
-
-}
-
-/*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
-.products-hero2 h1,
-.products-hero2 p {
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
-}
-
-.products-hero2 p {
-    animation-delay: 0.3s;
-}
-
-@keyframes fadeUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/*تنسيق ومطابقة لنسخة الموبايل*/
-@media (max-width: 768px) {
-    .products-hero2 {
-        height: 300px;
-        background-position: center;
-    }
-
-    .products-hero2 .overlay1 {
-        width: 100%;
-        clip-path: none;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .products-hero2 h1 {
-        font-size: 28px;
-    }
-
-    .products-hero2 p {
-        font-size: 16px;
-        margin: 10px auto 0;
-    }
-}
-
-/*تنسيق عنوان الصفحه الخاص بالقسم الثالث تبع المنتجات*/
-.products-hero3 {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-image: url("../products/medical-bg.png");
-    /* ضع رابط صورتك هنا */
-    background-size: cover;
-    background-position: center right;
-    display: flex;
-    align-items: center;
-}
-
-/* الخلفية الزرقاء المائلة */
-.products-hero3 .overlay3 {
-    background: #1f4e79;
-    width: 54%;
-    height: 100%;
-    clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-
-    display: flex;
-    flex-direction: column;
-    /* مهم */
-    justify-content: center;
-    /* توسيط عمودي */
-    padding-left: 30px;
-}
-
-.products-hero3 h1 {
-    color: white;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
-
-}
-
-.products-hero3 p {
-    color: white;
-    font-size: 18px;
-    margin-top: 15px;
-    max-width: 400px;
-    line-height: 1.6;
-
-}
-
-/*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
-.products-hero3 h1,
-.products-hero3 p {
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
-}
-
-.products-hero3 p {
-    animation-delay: 0.3s;
-}
-
-@keyframes fadeUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/*تنسيق ومطابقة لنسخة الموبايل*/
-@media (max-width: 768px) {
-    .products-hero3 {
-        height: 300px;
-        background-position: center;
-    }
-
-    .products-hero3 .overlay3 {
-        width: 100%;
-        clip-path: none;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .products-hero3 h1 {
-        font-size: 28px;
-    }
-
-    .products-hero3 p {
-        font-size: 16px;
-        margin: 10px auto 0;
-    }
-}
-
-/*تنسيق عنوان الصفحه الخاص بالقسم الرابع تبع المنتجات*/
-.products-hero4 {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-image: url("../products/medical-bg.png");
-    /* ضع رابط صورتك هنا */
-    background-size: cover;
-    background-position: center right;
-    display: flex;
-    align-items: center;
-}
-
-/* الخلفية الزرقاء المائلة */
-.products-hero4 .overlay4 {
-    background: #1f4e79;
-    width: 58%;
-    height: 100%;
-    clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-
-    display: flex;
-    flex-direction: column;
-    /* مهم */
-    justify-content: center;
-    /* توسيط عمودي */
-    padding-left: 30px;
-}
-
-.products-hero4 h1 {
-    color: white;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
-
-}
-
-.products-hero4 p {
-    color: white;
-    font-size: 18px;
-    margin-top: 15px;
-    max-width: 400px;
-    line-height: 1.6;
-
-}
-
-/*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
-.products-hero4 h1,
-.products-hero4 p {
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
-}
-
-.products-hero4 p {
-    animation-delay: 0.3s;
-}
-
-@keyframes fadeUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/*تنسيق ومطابقة لنسخة الموبايل*/
-@media (max-width: 768px) {
-    .products-hero4 {
-        height: 300px;
-        background-position: center;
-    }
-
-    .products-hero4 .overlay4 {
-        width: 100%;
-        clip-path: none;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .products-hero4 h1 {
-        font-size: 28px;
-    }
-
-    .products-hero4 p {
-        font-size: 16px;
-        margin: 10px auto 0;
-    }
-}
-
-
-/*تنسيق عنوان الصفحه الخاص بالقسم الخامس تبع المنتجات*/
-.products-hero5 {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-image: url("../products/medical-bg.png");
-    /* ضع رابط صورتك هنا */
-    background-size: cover;
-    background-position: center right;
-    display: flex;
-    align-items: center;
-}
-
-/* الخلفية الزرقاء المائلة */
-.products-hero5 .overlay5 {
-    background: #1f4e79;
-    width: 54%;
-    height: 100%;
-    clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
-
-    display: flex;
-    flex-direction: column;
-    /* مهم */
-    justify-content: center;
-    /* توسيط عمودي */
-    padding-left: 30px;
-}
-
-.products-hero5 h1 {
-    color: white;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
-
-}
-
-.products-hero5 p {
-    color: white;
-    font-size: 18px;
-    margin-top: 15px;
-    max-width: 400px;
-    line-height: 1.6;
-
-}
-
-/*إضافة حركة خفيفة للنص عند تحميل الصفحة*/
-.products-hero5 h1,
-.products-hero5 p {
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
-}
-
-.products-hero5 p {
-    animation-delay: 0.3s;
-}
-
-@keyframes fadeUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/*تنسيق ومطابقة لنسخة الموبايل*/
-@media (max-width: 768px) {
-    .products-hero5 {
-        height: 300px;
-        background-position: center;
-    }
-
-    .products-hero5 .overlay5 {
-        width: 100%;
-        clip-path: none;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .products-hero5 h1 {
-        font-size: 28px;
-    }
-
-    .products-hero5 p {
-        font-size: 16px;
-        margin: 10px auto 0;
-    }
-}
-
-
 
 
 
