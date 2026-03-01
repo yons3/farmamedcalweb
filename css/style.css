@@ -1283,7 +1283,7 @@ textarea.form-control {
 /*اضافة صورة خلفية الى قسم الاتصال*/
 .contact-header {
     /* المسار إلى الصورة التي تريدها */
-    background-image: url('../assets/images/contact-bg.jpeg');
+    background-image: url('../assets/images/contact-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
